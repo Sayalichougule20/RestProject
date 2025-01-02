@@ -1,0 +1,72 @@
+<form (ngSubmit)="submitdata()" style="position: relative;" style="margin-bottom: 0%; margin-top: 0%;">
+    <!-- Background Image -->
+    <img src="m2.webp" alt="Background Image" style="width: 100%; height: 650px; opacity: 0.9; position: absolute; top: 0; left: 0; z-index: -1;">
+    
+    <!-- Transparent Container with Rounded Corners -->
+    <div style="
+        position: absolute;
+        padding-top: 20%;
+        left: 30%;
+        color: white;
+        width: 550px;
+        height: 570px;
+        background-color: rgba(0, 0, 0, 0.6); /*Semi-transparent black*/
+        border-radius: 15px; /*Rounded corners*/
+        padding: 20px;
+        box-sizing: border-box;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 0%;
+    ">
+        <!-- Form Content -->
+        <div class="form-group" style="margin-bottom: 5px;">
+            <h1 class="text-centre" style="text-align: center; margin-top:0px ;">Register Here</h1>
+            <label for="name" style="display: block; margin-bottom: 5px;">Name:</label>
+            <input type="text" class="form-control" name="name" id="name" style="width: 100%; padding: 8px; border-radius: 5px; border: none;" [(ngModel)]="reg.name">
+        </div>
+        <div class="form-group" style="margin-bottom: 10px;">
+            <label for="age" style="display: block; margin-bottom: 5px;">Age:</label>
+            <input type="number" class="form-control" name="age" id="age" style="width: 50%; padding: 8px; border-radius: 5px; border: none;" [(ngModel)]="reg.age">
+        </div>
+        <div class="form-group" style="margin-bottom: 10px;">
+            <label for="gender" style="display: block; margin-bottom: 5px;">Gender:</label>
+            <input type="radio" name="gender" id="gender-female" value="female" style="margin-right: 10px;" [(ngModel)]="reg.gender">
+            <label for="gender-female" style="margin-right: 30px;">Female</label>
+            <input type="radio" name="gender" id="gender-male" value="male" style="margin-right: 10px;" [(ngModel)]="reg.gender">
+            <label for="gender-male">Male</label>
+        </div>
+        <div class="form-group" style="margin-bottom: 10px;">
+            <label for="contact" style="display: block; margin-bottom: 5px;">Contact:</label>
+            <input type="text" class="form-control" name="contact" id="contact" style="width: 50%; padding: 8px; border-radius: 5px; border: none;" [(ngModel)]="reg.contact">
+        </div>
+        <div class="form-group" style="margin-bottom: 10px;">
+            <label for="emailid" style="display: block; margin-bottom: 5px;">Email Address:</label>
+            <input type="email" class="form-control" name="emailid" id="emailid" style="width: 100%; padding: 8px; border-radius: 5px; border: none;" [(ngModel)]="reg.emailid">
+        </div>
+        <div class="form-group" style="margin-bottom: 10px;">
+            <label for="password" style="display: block; margin-bottom: 5px;">Password:</label>
+            <input type="password" class="form-control" name="password" id="password" style="width: 50%; padding: 8px; border-radius: 5px; border: none;" [(ngModel)]="reg.password">
+        </div>
+        <div class="checkbox" style="margin-bottom: 10px;">
+            <label><input type="checkbox" style="margin-right: 10px;"> Remember me</label>
+        </div>
+        <div>
+            <button type="submit" style="
+                background-color: transparent; 
+                border: 2px solid white; 
+                color: whitesmoke; 
+                font-size: 16px; 
+                padding: 10px 32px; 
+                cursor: pointer; 
+                border-radius: 8px; 
+                transition: background-color 0.3s, color 0.3s; 
+                text-decoration: none; 
+                text-align: center; 
+                outline: none;
+                " onmouseover="this.style.backgroundColor='white'; this.style.color='black';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='whitesmoke';
+            ">
+                Create Account
+            </button>
+        </div>
+    </div>
+</form>
